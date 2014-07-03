@@ -3,43 +3,70 @@
 @import 'typography';
 
 .container{
-	margin-top: $baseline *8;
+	margin-top: $baseline *3;
 	text-align:center;
 }
 
-.keyboard{
+.rack{
+	clear:both;
 	margin: $baseline*2 auto;
-	width: 500px;
+	width: 600px;
 	list-style:none;
 }
 
 .trigger{
-	background-color: $primary-color;
-	color:#fff;
 	width:$baseline *8;
 	height:$baseline *8;
 	text-align: center;
 	font-size: 18px;
 	margin: $baseline;
+	float:left;
+	color:#fff;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	@include border-radius(20px 5px 20px 5px);
-	@include box-sizing(border-box);
 	border: #fff solid 0px;
-	float:left;
+	@include box-sizing(border-box);
 	@include transform (border, 100ms, ease-out);
 	@include transform (background-color, 200ms, ease-out);
+
+	&:hover{
+		border: #fff solid 2px;
+		@include transform (border, 200ms, ease-out);
+		@include transform (background-color, 200ms, ease-out);
+	}
 }
 
-.trigger:hover{
-	border: #fff solid 2px;
-	background-color: darken( $primary-color, 10%);
-	@include transform (border, 200ms, ease-out);
-	@include transform (background-color, 200ms, ease-out);
+.keyboard{
+	.trigger{
+		background-color: $primary-color;
+		@include border-radius(100px 100px 150px 150px);
+		
+		&:hover{
+			background-color: darken( $primary-color, 10%);
+		}
+	}
 }
 
-.trigger:active{
-	background-color: #f64d29;
+.perc{
+	.trigger{
+		background-color: $secondary-color;
+		@include border-radius(800px 60px 900px 60px);
+		
+		&:hover{
+			background-color: darken( $secondary-color, 10%);
+		}
+	}
+}
+
+.stab{
+	.trigger{
+		background-color: $tertiary-color;
+		@include border-radius(60px 60px 400px 60px);
+		
+		&:hover{
+			background-color: darken( $tertiary-color, 10%);
+		}
+	}
 }
 
 a{
@@ -51,5 +78,6 @@ a{
 }
 
 footer{
+	padding-top:$baseline;
 	clear:both;
 }

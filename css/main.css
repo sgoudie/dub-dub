@@ -15,33 +15,29 @@ footer p {
   text-transform: uppercase; }
 
 .container {
-  margin-top: 96px;
+  margin-top: 36px;
   text-align: center; }
 
-.keyboard {
+.rack {
+  clear: both;
   margin: 24px auto;
-  width: 500px;
+  width: 600px;
   list-style: none; }
 
 .trigger {
-  background-color: #f26c4f;
-  color: #fff;
   width: 96px;
   height: 96px;
   text-align: center;
   font-size: 18px;
   margin: 12px;
+  float: left;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  -webkit-border-radius: 20px 5px 20px 5px;
-  border-radius: 20px 5px 20px 5px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
+  border: #fff solid 0px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: #fff solid 0px;
-  float: left;
   transform: border 100ms ease-out;
   -webkit-transition: border 100ms ease-out;
   -moz-transition: border 100ms ease-out;
@@ -50,21 +46,43 @@ footer p {
   -webkit-transition: background-color 200ms ease-out;
   -moz-transition: background-color 200ms ease-out;
   -o-transition: background-color 200ms ease-out; }
+  .trigger:hover {
+    border: #fff solid 2px;
+    transform: border 200ms ease-out;
+    -webkit-transition: border 200ms ease-out;
+    -moz-transition: border 200ms ease-out;
+    -o-transition: border 200ms ease-out;
+    transform: background-color 200ms ease-out;
+    -webkit-transition: background-color 200ms ease-out;
+    -moz-transition: background-color 200ms ease-out;
+    -o-transition: background-color 200ms ease-out; }
 
-.trigger:hover {
-  border: #fff solid 2px;
-  background-color: #ee4420;
-  transform: border 200ms ease-out;
-  -webkit-transition: border 200ms ease-out;
-  -moz-transition: border 200ms ease-out;
-  -o-transition: border 200ms ease-out;
-  transform: background-color 200ms ease-out;
-  -webkit-transition: background-color 200ms ease-out;
-  -moz-transition: background-color 200ms ease-out;
-  -o-transition: background-color 200ms ease-out; }
+.keyboard .trigger {
+  background-color: #f26c4f;
+  -webkit-border-radius: 100px 100px 150px 150px;
+  border-radius: 100px 100px 150px 150px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
+  .keyboard .trigger:hover {
+    background-color: #ee4420; }
 
-.trigger:active {
-  background-color: #f64d29; }
+.perc .trigger {
+  background-color: #f2c74f;
+  -webkit-border-radius: 800px 60px 900px 60px;
+  border-radius: 800px 60px 900px 60px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
+  .perc .trigger:hover {
+    background-color: #eeb820; }
+
+.stab .trigger {
+  background-color: #25445c;
+  -webkit-border-radius: 60px 60px 400px 60px;
+  border-radius: 60px 60px 400px 60px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
+  .stab .trigger:hover {
+    background-color: #162938; }
 
 a {
   text-decoration: none;
@@ -73,4 +91,5 @@ a {
     color: #ee4420; }
 
 footer {
+  padding-top: 12px;
   clear: both; }
