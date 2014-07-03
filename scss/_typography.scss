@@ -1,0 +1,19 @@
+h1{
+	font-family: $font-stack-A;
+	font-weight: 700;
+	font-size:36px;
+	line-height:$baseline*3;
+	margin:$baseline 0;
+	text-transform:uppercase;
+}
+
+footer{
+	p{
+		font-family: $font-stack-A;
+		font-size:10px;
+		letter-spacing:1px;
+		line-height:$baseline*3;
+		margin:$baseline 0;
+		text-transform:uppercase;
+	}
+}

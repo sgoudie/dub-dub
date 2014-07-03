@@ -1,0 +1,76 @@
+h1 {
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 12px 0;
+  text-transform: uppercase; }
+
+footer p {
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 36px;
+  margin: 12px 0;
+  text-transform: uppercase; }
+
+.container {
+  margin-top: 96px;
+  text-align: center; }
+
+.keyboard {
+  margin: 24px auto;
+  width: 500px;
+  list-style: none; }
+
+.trigger {
+  background-color: #f26c4f;
+  color: #fff;
+  width: 96px;
+  height: 96px;
+  text-align: center;
+  font-size: 18px;
+  margin: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-border-radius: 20px 5px 20px 5px;
+  border-radius: 20px 5px 20px 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: #fff solid 0px;
+  float: left;
+  transform: border 100ms ease-out;
+  -webkit-transition: border 100ms ease-out;
+  -moz-transition: border 100ms ease-out;
+  -o-transition: border 100ms ease-out;
+  transform: background-color 200ms ease-out;
+  -webkit-transition: background-color 200ms ease-out;
+  -moz-transition: background-color 200ms ease-out;
+  -o-transition: background-color 200ms ease-out; }
+
+.trigger:hover {
+  border: #fff solid 2px;
+  background-color: #ee4420;
+  transform: border 200ms ease-out;
+  -webkit-transition: border 200ms ease-out;
+  -moz-transition: border 200ms ease-out;
+  -o-transition: border 200ms ease-out;
+  transform: background-color 200ms ease-out;
+  -webkit-transition: background-color 200ms ease-out;
+  -moz-transition: background-color 200ms ease-out;
+  -o-transition: background-color 200ms ease-out; }
+
+.trigger:active {
+  background-color: #f64d29; }
+
+a {
+  text-decoration: none;
+  color: #f26c4f; }
+  a:hover {
+    color: #ee4420; }
+
+footer {
+  clear: both; }

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="utf-8">
+    <title>Toy Piano</title>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
 	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
 	<script src="js/ion.sound.js"></script>  
 </head>
@@ -9,84 +12,31 @@
 <html>
 
 <body>
-	<h1>Toy Piano</h1>
-    <ul class="keyboard">
-        <li class="trigger" id="note1">
-        <li class="trigger" id="note2">
-        <li class="trigger" id="note3">
-        <li class="trigger" id="note4">
-        <li class="trigger" id="note5">
-        <li class="trigger" id="note6">
-        <li class="trigger" id="note7">
-        <li class="trigger" id="note8">
-        <li class="trigger" id="note9">
-        <li class="trigger" id="note10">
-    </ul>
+    <div class="container">
+    	<h1>Toy Piano</h1>
+        <ul class="keyboard">
+            <li class="trigger" id="note1">
+            <li class="trigger" id="note2">
+            <li class="trigger" id="note3">
+            <li class="trigger" id="note4">
+            <li class="trigger" id="note5">
+            <li class="trigger" id="note6">
+            <li class="trigger" id="note7">
+            <li class="trigger" id="note8">
+            <li class="trigger" id="note9">
+            <li class="trigger" id="note10">
+        </ul>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Toy Piano v0.2. Created by <a href="http://www.samuelgoudie.co.uk">S.Goudie</a> 2014. Samples recorded in a bathroom.</p>
+        </div>
+    </footer>
 
-<script>
-    $(document).ready(function(){
+<script src="js/main.js"></script>
 
-        $.ionSound({
-            sounds: [
-                "1Asharp",
-                "2C",
-                "3D",
-                "4Dsharp",
-                "5F",
-                "6G",
-                "7A",
-                "8Bflat",
-                "9Csharp",
-                "10D",
-
-            ],
-            path: "sounds/",
-            multiPlay: true,
-            volume: "1.0"
-        });
-
-        $("#note1").mouseenter(function(){
-            $.ionSound.play("1Asharp");
-        });
-
-        $("#note2").mouseenter(function(){
-            $.ionSound.play("2C");
-        });
-
-        $("#note3").mouseenter(function(){
-            $.ionSound.play("3D");
-        });
-
-        $("#note4").mouseenter(function(){
-            $.ionSound.play("4Dsharp");
-        });
-
-        $("#note5").mouseenter(function(){
-            $.ionSound.play("5F");
-        });
-
-        $("#note6").mouseenter(function(){
-            $.ionSound.play("6G");
-        });
-
-        $("#note7").mouseenter(function(){
-            $.ionSound.play("7A");
-        });
-
-        $("#note8").mouseenter(function(){
-            $.ionSound.play("8Bflat");
-        });
-
-        $("#note9").mouseenter(function(){
-            $.ionSound.play("9Csharp");
-        });
-
-        $("#note10").mouseenter(function(){
-            $.ionSound.play("10D");
-        });
-
-    });
-</script>
+<!-- Live Reload -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 </body>
 

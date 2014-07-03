@@ -1,0 +1,55 @@
+@import 'config';
+@import 'mixins';
+@import 'typography';
+
+.container{
+	margin-top: $baseline *8;
+	text-align:center;
+}
+
+.keyboard{
+	margin: $baseline*2 auto;
+	width: 500px;
+	list-style:none;
+}
+
+.trigger{
+	background-color: $primary-color;
+	color:#fff;
+	width:$baseline *8;
+	height:$baseline *8;
+	text-align: center;
+	font-size: 18px;
+	margin: $baseline;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@include border-radius(20px 5px 20px 5px);
+	@include box-sizing(border-box);
+	border: #fff solid 0px;
+	float:left;
+	@include transform (border, 100ms, ease-out);
+	@include transform (background-color, 200ms, ease-out);
+}
+
+.trigger:hover{
+	border: #fff solid 2px;
+	background-color: darken( $primary-color, 10%);
+	@include transform (border, 200ms, ease-out);
+	@include transform (background-color, 200ms, ease-out);
+}
+
+.trigger:active{
+	background-color: #f64d29;
+}
+
+a{
+	text-decoration:none;
+	color:$primary-color;
+	&:hover{
+		color: darken( $primary-color, 10%);
+	}
+}
+
+footer{
+	clear:both;
+}

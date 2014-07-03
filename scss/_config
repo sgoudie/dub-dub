@@ -1,0 +1,4 @@
+$primary-color: #F05050;
+$background-colour: #EDE5CF;
+$font-stack-A: 'Montserrat', helvetica, arial, sans-serif;
+$baseline: 12px; 
