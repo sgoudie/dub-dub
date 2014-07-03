@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="main.css">
+	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/ion.sound.js"></script>  
+</head>
+
+<html>
+
+<body>
+	<h1>Toy Piano</h1>
+    <ul class="keyboard">
+        <li class="trigger" id="note1">
+        <li class="trigger" id="note2">
+        <li class="trigger" id="note3">
+        <li class="trigger" id="note4">
+        <li class="trigger" id="note5">
+        <li class="trigger" id="note6">
+        <li class="trigger" id="note7">
+        <li class="trigger" id="note8">
+        <li class="trigger" id="note9">
+        <li class="trigger" id="note10">
+    </ul>
+
+<script>
+    $(document).ready(function(){
+
+        $.ionSound({
+            sounds: [
+                "1Asharp",
+                "2C",
+                "3D",
+                "4Dsharp",
+                "5F",
+                "6G",
+                "7A",
+                "8Bflat",
+                "9Csharp",
+                "10D",
+
+            ],
+            path: "sounds/",
+            multiPlay: true,
+            volume: "1.0"
+        });
+
+        $("#note1").mouseenter(function(){
+            $.ionSound.play("1Asharp");
+        });
+
+        $("#note2").mouseenter(function(){
+            $.ionSound.play("2C");
+        });
+
+        $("#note3").mouseenter(function(){
+            $.ionSound.play("3D");
+        });
+
+        $("#note4").mouseenter(function(){
+            $.ionSound.play("4Dsharp");
+        });
+
+        $("#note5").mouseenter(function(){
+            $.ionSound.play("5F");
+        });
+
+        $("#note6").mouseenter(function(){
+            $.ionSound.play("6G");
+        });
+
+        $("#note7").mouseenter(function(){
+            $.ionSound.play("7A");
+        });
+
+        $("#note8").mouseenter(function(){
+            $.ionSound.play("8Bflat");
+        });
+
+        $("#note9").mouseenter(function(){
+            $.ionSound.play("9Csharp");
+        });
+
+        $("#note10").mouseenter(function(){
+            $.ionSound.play("10D");
+        });
+
+    });
+</script>
+
+</body>
+
+</html>

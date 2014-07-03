@@ -1,0 +1,38 @@
+body{
+	font-family: 'Montserrat', helvetica, arial, sans-serif;
+	text-align: center;
+	padding-top: 50px;
+}
+
+h1{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.keyboard{
+	margin: 0 auto;
+	width: 500px;
+}
+
+.trigger{
+	background-color: #f26c4f;
+	color:#fff;
+	width:50px;
+	height:50px;
+	padding:20px;
+	text-align: center;
+	font-size: 18px;
+	margin: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-radius:20px 5px 20px 5px;
+	float:left;
+}
+
+.trigger:hover{
+	background-color: #d44425;
+}
+
+.trigger:active{
+	background-color: #f64d29;
+}
