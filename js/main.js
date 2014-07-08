@@ -8,7 +8,7 @@ $(document).ready(function(){
     //loads in sounds to ionsound
     $.ionSound({
         sounds: sounds,
-        path: "sounds/",
+        path: "sounds_64/",
         multiPlay: true,
         volume: "1.0"
     });

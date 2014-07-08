@@ -3,8 +3,9 @@ h1 {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
-  margin: 12px 0;
-  text-transform: uppercase; }
+  margin: 24px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 footer p {
   font-family: "Montserrat", helvetica, arial, sans-serif;
@@ -15,13 +16,13 @@ footer p {
   text-transform: uppercase; }
 
 .container {
-  margin-top: 36px;
-  text-align: center; }
+  margin: 36px auto;
+  text-align: center;
+  width: 700px; }
 
 .rack {
   clear: both;
-  margin: 24px auto;
-  width: 600px;
+  width: 700px;
   list-style: none; }
 
 .trigger {

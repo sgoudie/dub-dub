@@ -3,14 +3,14 @@
 @import 'typography';
 
 .container{
-	margin-top: $baseline *3;
+	margin: $baseline *3 auto;
 	text-align:center;
+	width:700px
 }
 
 .rack{
 	clear:both;
-	margin: $baseline*2 auto;
-	width: 600px;
+	width: 700px;
 	list-style:none;
 }
 
