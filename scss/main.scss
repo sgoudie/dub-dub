@@ -3,7 +3,7 @@
 @import 'typography';
 
 body{
-	background-color:#fafaf5;
+	background-color:$background-color;
 }
 
 .container{
@@ -70,6 +70,30 @@ body{
 		&:hover{
 			background-color: darken( $tertiary-color, 10%);
 		}
+	}
+}
+
+.switch{
+	background-color: darken($background-color, 20%);
+	border: 0;
+	@include border-radius(5px);
+	color: $background-color;
+	font-family: $font-stack-A;
+	font-size:12px;
+	text-transform:uppercase;
+	outline:0;
+	&:hover{
+		background-color: darken($background-color, 30%);
+	}
+	&:active{
+		background-color:darken($background-color, 50%);
+	}
+}
+
+.selected{
+	background-color:darken($background-color, 50%);
+	&:hover{
+		background-color:darken($background-color, 50%);
 	}
 }
 

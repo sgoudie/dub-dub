@@ -91,6 +91,28 @@ body {
   .stab .trigger:hover {
     background-color: #162938; }
 
+.switch {
+  background-color: #d8d8b1;
+  border: 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  color: #fafaf5;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  outline: 0; }
+  .switch:hover {
+    background-color: #c7c78f; }
+  .switch:active {
+    background-color: #a0a050; }
+
+.selected {
+  background-color: #a0a050; }
+  .selected:hover {
+    background-color: #a0a050; }
+
 a {
   text-decoration: none;
   color: #f26c4f; }

@@ -1,5 +1,7 @@
 context = new webkitAudioContext();
 
+var delaySwitch = 0; //0=off, 1=on
+
 var delayLength = 0.5;
 var delayFeedback = 0.8;
 var delayResonance = 2000;
@@ -33,6 +35,7 @@ var assets = new AbbeyLoad( [{
     }], function (buffers) {
 
         var hookup = function (noteSource){
+            if(delaySwitch == 1){
             var delay = context.createDelay();
             delay.delayTime.value = delayLength;
             var feedback = context.createGain();
@@ -44,8 +47,24 @@ var assets = new AbbeyLoad( [{
             filter.connect(delay);
             noteSource.connect(delay);
             noteSource.connect(context.destination);
-            filter.connect(context.destination);   
+            filter.connect(context.destination); 
+            }else{
+                noteSource.connect(context.destination);
+            }  
         }
+
+        $("#delayOn").click(function(){
+            delaySwitch = 1;
+            $("#delayOn").addClass("selected");
+            $("#delayOff").removeClass("selected");
+        });
+
+        $("#delayOff").click(function(){
+            delaySwitch = 0;
+            $("#delayOff").addClass("selected");
+            $("#delayOn").removeClass("selected");
+        });      
+
 
     	$("#note1").mouseenter(function(){
             var note1 = context.createBufferSource();
