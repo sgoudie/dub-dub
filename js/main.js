@@ -1,5 +1,9 @@
 context = new webkitAudioContext();
 
+var delayLength = 0.5;
+var delayFeedback = 0.8;
+var delayResonance = 2000;
+
 var assets = new AbbeyLoad( [{
      'note1': 'sounds_64/1Asharp.ogg',
      'note2': 'sounds_64/2C.ogg',
@@ -28,73 +32,88 @@ var assets = new AbbeyLoad( [{
      'stab5': 'sounds_64/gliss.ogg',
     }], function (buffers) {
 
+        var hookup = function (noteSource){
+            var delay = context.createDelay();
+            delay.delayTime.value = delayLength;
+            var feedback = context.createGain();
+            feedback.gain.value = delayFeedback;
+            var filter = context.createBiquadFilter();
+            filter.frequency.value = delayResonance;
+            delay.connect(feedback);
+            feedback.connect(filter);
+            filter.connect(delay);
+            noteSource.connect(delay);
+            noteSource.connect(context.destination);
+            filter.connect(context.destination);   
+        }
+
     	$("#note1").mouseenter(function(){
-    		var note1 = context.createBufferSource();
-    		note1.buffer = (buffers.note1);
-    		note1.connect(context.destination);
-    		note1.start(0);
+            var note1 = context.createBufferSource();
+            note1.buffer = (buffers.note1);
+    		hookup(note1);
+            note1.start(0);
 		});
 
 		$("#note2").mouseenter(function(){
-    		var note2 = context.createBufferSource();
-    		note2.buffer = (buffers.note2);
-    		note2.connect(context.destination);
-    		note2.start(0);
+            var note2 = context.createBufferSource();
+            note2.buffer = (buffers.note2);
+            hookup(note2);
+            note2.start(0);
 		});
 
 		$("#note3").mouseenter(function(){
-    		var note3 = context.createBufferSource();
-    		note3.buffer = (buffers.note3);
-    		note3.connect(context.destination);
-    		note3.start(0);
+            var note3 = context.createBufferSource();
+            note3.buffer = (buffers.note3);
+            hookup(note3);
+            note3.start(0);
 		});
 
 		$("#note4").mouseenter(function(){
-    		var note4 = context.createBufferSource();
-    		note4.buffer = (buffers.note4);
-    		note4.connect(context.destination);
-    		note4.start(0);
+            var note4 = context.createBufferSource();
+            note4.buffer = (buffers.note4);
+            hookup(note4);
+            note4.start(0);
 		});
 
 		$("#note5").mouseenter(function(){
-    		var note5 = context.createBufferSource();
-    		note5.buffer = (buffers.note5);
-    		note5.connect(context.destination);
-    		note5.start(0);
+            var note5 = context.createBufferSource();
+            note5.buffer = (buffers.note5);
+            hookup(note5);
+            note5.start(0);
 		});
 
 		$("#note6").mouseenter(function(){
     		var note6 = context.createBufferSource();
     		note6.buffer = (buffers.note6);
-    		note6.connect(context.destination);
+    		hookup(note6);
     		note6.start(0);
 		});
 
 		$("#note7").mouseenter(function(){
     		var note7 = context.createBufferSource();
     		note7.buffer = (buffers.note7);
-    		note7.connect(context.destination);
+    		hookup(note7);
     		note7.start(0);
 		});
 
 		$("#note8").mouseenter(function(){
     		var note8 = context.createBufferSource();
     		note8.buffer = (buffers.note8);
-    		note8.connect(context.destination);
+    		hookup(note8);
     		note8.start(0);
 		});
 
 		$("#note9").mouseenter(function(){
     		var note9 = context.createBufferSource();
     		note9.buffer = (buffers.note9);
-    		note9.connect(context.destination);
+    		hookup(note9);
     		note9.start(0);
 		});
 
 		$("#note10").mouseenter(function(){
     		var note10 = context.createBufferSource();
     		note10.buffer = (buffers.note10);
-    		note10.connect(context.destination);
+    		hookup(note10);
     		note10.start(0);
 		});
 
@@ -104,70 +123,70 @@ var assets = new AbbeyLoad( [{
 		$("#perc1").mouseenter(function(){
     		var perc1 = context.createBufferSource();
     		perc1.buffer = (buffers.perc1);
-    		perc1.connect(context.destination);
+    		hookup(perc1);
     		perc1.start(0);
 		});
 
 		$("#perc2").mouseenter(function(){
     		var perc2 = context.createBufferSource();
     		perc2.buffer = (buffers.perc2);
-    		perc2.connect(context.destination);
+    		hookup(perc2);
     		perc2.start(0);
 		});
 
 		$("#perc3").mouseenter(function(){
     		var perc3 = context.createBufferSource();
     		perc3.buffer = (buffers.perc3);
-    		perc3.connect(context.destination);
+    		hookup(perc3);
     		perc3.start(0);
 		});
 
 		$("#perc4").mouseenter(function(){
     		var perc4 = context.createBufferSource();
     		perc4.buffer = (buffers.perc4);
-    		perc4.connect(context.destination);
+    		hookup(perc4);
     		perc4.start(0);
 		});
 
 		$("#perc5").mouseenter(function(){
     		var perc5 = context.createBufferSource();
     		perc5.buffer = (buffers.perc5);
-    		perc5.connect(context.destination);
+    		hookup(perc5);
     		perc5.start(0);
 		});
 
 		$("#perc6").mouseenter(function(){
     		var perc6 = context.createBufferSource();
     		perc6.buffer = (buffers.perc6);
-    		perc6.connect(context.destination);
+    		hookup(perc6);
     		perc6.start(0);
 		});
 
 		$("#perc7").mouseenter(function(){
     		var perc7 = context.createBufferSource();
     		perc7.buffer = (buffers.perc7);
-    		perc7.connect(context.destination);
+    		hookup(perc7);
     		perc7.start(0);
 		});
 
 		$("#perc8").mouseenter(function(){
     		var perc8 = context.createBufferSource();
     		perc8.buffer = (buffers.perc8);
-    		perc8.connect(context.destination);
+    		hookup(perc8);
     		perc8.start(0);
 		});
 
 		$("#perc9").mouseenter(function(){
     		var perc9 = context.createBufferSource();
     		perc9.buffer = (buffers.perc9);
-    		perc9.connect(context.destination);
+    		hookup(perc9);
     		perc9.start(0);
 		});
 
 		$("#perc10").mouseenter(function(){
     		var perc10 = context.createBufferSource();
     		perc10.buffer = (buffers.perc10);
-    		perc10.connect(context.destination);
+    		hookup(perc10);
     		perc10.start(0);
 		});
 
@@ -177,63 +196,37 @@ var assets = new AbbeyLoad( [{
 		$("#stab1").mouseenter(function(){
     		var stab1 = context.createBufferSource();
     		stab1.buffer = (buffers.stab1);
-    		stab1.connect(context.destination);
+    		hookup(stab1);
     		stab1.start(0);
 		});
 
 		$("#stab2").mouseenter(function(){
     		var stab2 = context.createBufferSource();
     		stab2.buffer = (buffers.stab2);
-    		stab2.connect(context.destination);
+    		hookup(stab2);
     		stab2.start(0);
 		});
 
 		$("#stab3").mouseenter(function(){
     		var stab3 = context.createBufferSource();
     		stab3.buffer = (buffers.stab3);
-    		stab3.connect(context.destination);
+    		hookup(stab3);
     		stab3.start(0);
 		});
 
 		$("#stab4").mouseenter(function(){
     		var stab4 = context.createBufferSource();
     		stab4.buffer = (buffers.stab4);
-    		stab4.connect(context.destination);
+    		hookup(stab4);
     		stab4.start(0);
 		});
 
 		$("#stab5").mouseenter(function(){
     		var stab5 = context.createBufferSource();
     		stab5.buffer = (buffers.stab5);
-    		stab5.connect(context.destination);
+    		hookup(stab5);
     		stab5.start(0);
 		});
-
-
-		(function(){
-        var audioElement = $('audio')[0];
-
-        audioElement.addEventListener('play', function(){
-            var source = context.createMediaElementSource(audioElement);
-
-            var delay = context.createDelay();
-            delay.delayTime.value = 0.5;
-
-            var feedback = context.createGain();
-            feedback.gain.value = 0.8;
-
-            var filter = context.createBiquadFilter();
-            filter.frequency.value = 1500;
-
-            delay.connect(feedback);
-            feedback.connect(filter);
-            filter.connect(delay);
-
-            source.connect(delay);
-            source.connect(context.destination);
-            filter.connect(context.destination);
-        });
-    })();
 
 });
 
