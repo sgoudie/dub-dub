@@ -12,6 +12,14 @@ body{
 	color:#383834;
 }
 
+label{
+	font-family: $font-stack-A;
+	text-transform:uppercase;
+	font-weight: 700;
+	font-size:12px;
+	margin-right: 5px;
+}
+
 footer{
 	p{
 		font-family: $font-stack-A;

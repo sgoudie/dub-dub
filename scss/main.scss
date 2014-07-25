@@ -73,6 +73,22 @@ body{
 	}
 }
 
+.controls{
+	padding:0;
+	list-style:none;
+	text-align: center;
+	margin:0 0 30px 60px;
+	height: 10px;
+	li{
+		float:left;
+		margin-right:15px;
+		padding-top: 5px;
+		&:first-child{
+			padding-top: 0;
+		}
+	}
+}
+
 .switch{
 	background-color: darken($background-color, 20%);
 	border: 0;
@@ -82,12 +98,34 @@ body{
 	font-size:12px;
 	text-transform:uppercase;
 	outline:0;
+	width: 50px;
+	height: 30px;
 	&:hover{
 		background-color: darken($background-color, 30%);
 	}
 	&:active{
 		background-color:darken($background-color, 50%);
 	}
+}
+
+input[type=range]{
+	 -webkit-appearance: none;
+	background-color: darken($background-color, 20%);
+	@include border-radius(5px);
+	height:8px;
+	width:80px;
+	outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color: darken($background-color, 30%);
+    width: 8px;
+    height: 18px;
+    @include border-radius(5px);
+    &:active{
+    	background-color: darken($background-color, 50%);
+    }
 }
 
 .selected{

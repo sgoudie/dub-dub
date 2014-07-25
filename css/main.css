@@ -10,6 +10,13 @@ h1 {
 body {
   color: #383834; }
 
+label {
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  margin-right: 5px; }
+
 footer p {
   font-family: "Montserrat", helvetica, arial, sans-serif;
   font-size: 10px;
@@ -91,6 +98,19 @@ body {
   .stab .trigger:hover {
     background-color: #162938; }
 
+.controls {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 0 0 30px 60px;
+  height: 10px; }
+  .controls li {
+    float: left;
+    margin-right: 15px;
+    padding-top: 5px; }
+    .controls li:first-child {
+      padding-top: 0; }
+
 .switch {
   background-color: #d8d8b1;
   border: 0;
@@ -102,10 +122,35 @@ body {
   font-family: "Montserrat", helvetica, arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  outline: 0; }
+  outline: 0;
+  width: 50px;
+  height: 30px; }
   .switch:hover {
     background-color: #c7c78f; }
   .switch:active {
+    background-color: #a0a050; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  background-color: #d8d8b1;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  height: 8px;
+  width: 80px;
+  outline: none; }
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #c7c78f;
+  width: 8px;
+  height: 18px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
+  input[type="range"]::-webkit-slider-thumb:active {
     background-color: #a0a050; }
 
 .selected {

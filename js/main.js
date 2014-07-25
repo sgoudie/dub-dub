@@ -53,17 +53,36 @@ var assets = new AbbeyLoad( [{
             }  
         }
 
-        $("#delayOn").click(function(){
-            delaySwitch = 1;
-            $("#delayOn").addClass("selected");
-            $("#delayOff").removeClass("selected");
+        $("#delayToggle").click(function(){
+            if(delaySwitch == 0){
+                delaySwitch = 1;
+                $("#delayToggle").html("On");
+                $("#delayToggle").addClass("selected");
+            }else{
+                delaySwitch = 0;
+                $("#delayToggle").html("Off");
+                $("#delayToggle").removeClass("selected");
+            }
         });
 
-        $("#delayOff").click(function(){
-            delaySwitch = 0;
-            $("#delayOff").addClass("selected");
-            $("#delayOn").removeClass("selected");
-        });      
+
+
+        $("#timeCtrl").change(function(){
+           delayLength = this.value;
+           console.log('Delay Time: ' + delayLength);
+        });
+
+        $("#resCtrl").change(function(){
+           delayResonance = this.value;
+           console.log('Resonance: ' + delayResonance);
+        });
+
+        $("#feedbackCtrl").change(function(){
+           delayFeedback = this.value;
+           console.log('Feedback: ' + delayFeedback);
+        });    
+
+
 
 
     	$("#note1").mouseenter(function(){
