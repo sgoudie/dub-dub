@@ -1,11 +1,14 @@
 h1 {
   font-family: "Montserrat", helvetica, arial, sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 48px;
   line-height: 36px;
   margin: 24px 0;
   text-transform: uppercase;
   letter-spacing: 1px; }
+
+body {
+  color: #383834; }
 
 footer p {
   font-family: "Montserrat", helvetica, arial, sans-serif;
@@ -14,6 +17,9 @@ footer p {
   line-height: 36px;
   margin: 12px 0;
   text-transform: uppercase; }
+
+body {
+  background-color: #fafaf5; }
 
 .container {
   margin: 36px auto;
@@ -84,6 +90,28 @@ footer p {
   /* stops bg color from leaking outside the border: */ }
   .stab .trigger:hover {
     background-color: #162938; }
+
+.switch {
+  background-color: #d8d8b1;
+  border: 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  color: #fafaf5;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  outline: 0; }
+  .switch:hover {
+    background-color: #c7c78f; }
+  .switch:active {
+    background-color: #a0a050; }
+
+.selected {
+  background-color: #a0a050; }
+  .selected:hover {
+    background-color: #a0a050; }
 
 a {
   text-decoration: none;

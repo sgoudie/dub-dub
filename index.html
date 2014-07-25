@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
-	<script src="js/ion.sound.js"></script>  
+    <script type="text/javascript" src="js/abbey-load.js"></script> 
 </head>
 
 <html>
@@ -14,41 +14,46 @@
 <body>
     <div class="container">
     	<h1>Toy Piano</h1>
+
+        <button id="delayOn" class="switch">Delay On</button>
+        <button id="delayOff" class="switch selected">Delay Off</button>
+
         <ul class="rack keyboard">
-            <li class="trigger" data-note="1Asharp">
-            <li class="trigger" data-note="2C">
-            <li class="trigger" data-note="3D">
-            <li class="trigger" data-note="4Dsharp">
-            <li class="trigger" data-note="5F">
-            <li class="trigger" data-note="6G">
-            <li class="trigger" data-note="7A">
-            <li class="trigger" data-note="8Bflat">
-            <li class="trigger" data-note="9Csharp">
-            <li class="trigger" data-note="10D">
+            <li class="trigger" id="note1">
+            <li class="trigger" id="note2">
+            <li class="trigger" id="note3">
+            <li class="trigger" id="note4">
+            <li class="trigger" id="note5">
+            <li class="trigger" id="note6">
+            <li class="trigger" id="note7">
+            <li class="trigger" id="note8">
+            <li class="trigger" id="note9">
+            <li class="trigger" id="note10">
         </ul>
         <ul class="rack perc">
-            <li class="trigger" data-note="key_scrape">
-            <li class="trigger" data-note="knock_1">
-            <li class="trigger" data-note="knock_2">
-            <li class="trigger" data-note="scrape">
-            <li class="trigger" data-note="scuff_1">
-            <li class="trigger" data-note="scuff_2">
-            <li class="trigger" data-note="tap_1">
-            <li class="trigger" data-note="tap_2">
-            <li class="trigger" data-note="woodknock_1">
-            <li class="trigger" data-note="woodknock_2">
+            <li class="trigger" id="perc1">
+            <li class="trigger" id="perc2">
+            <li class="trigger" id="perc3">
+            <li class="trigger" id="perc4">
+            <li class="trigger" id="perc5">
+            <li class="trigger" id="perc6">
+            <li class="trigger" id="perc7">
+            <li class="trigger" id="perc8">
+            <li class="trigger" id="perc9">
+            <li class="trigger" id="perc10">
         </ul>
         <ul class="rack stab">
-            <li class="trigger" data-note="drop_1">
-            <li class="trigger" data-note="drop_2">
-            <li class="trigger" data-note="drop_small">
-            <li class="trigger" data-note="gliss">
-            <li class="trigger" data-note="knock_hard">
+            <li class="trigger" id="stab1">
+            <li class="trigger" id="stab2">
+            <li class="trigger" id="stab3">
+            <li class="trigger" id="stab4">
+            <li class="trigger" id="stab5">
         </ul>
     </div>
     <footer>
         <div class="container">
-            <p>Toy Piano v0.3. Created by <a href="http://www.samuelgoudie.co.uk">S.Goudie</a> 2014. Samples recorded in a bathroom.</p>
+            <p>Toy Piano v2.0. Created by <a href="http://www.samuelgoudie.co.uk">S.Goudie</a> 2014. Samples recorded in a bathroom.</p>
+            <p>Thanks to <a href="https://twitter.com/stuartmemo">Stuart Memo</a> for creating <a href="http://stuartmemo.com/abbey-load/"</a>Abbey Load.</p>
         </div>
     </footer>
 
